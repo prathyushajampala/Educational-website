@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Court</title>
+    <link rel="stylesheet" href="style.css">
+    <!---we had linked our css file----->
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <header>
+        
+                    <div class="logo" style="display: flex;align-items: center;margin-right: 10px;">
+                        <img src="logo.png" alt="Your Logo" style="width: 80px; height: 50px;">
+                        <h1 style="color: rgb(9, 167, 230);size: 5ch;">|</h1>
+                        <h1 style="color: rgb(9, 167, 230);">Course Court</h1>
+                    </div>
+                    
+                </header>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href='Registration.html'>Home</a></li>
+                    <li><a href='code.html'>Programs</a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+                </div>
+                <form id='login' class='input-group-login' method="POST" action="login.php" >
+                    <input type='text'class='input-field'placeholder='User_Id' name="User_id" required >
+		    <input type='password'class='input-field'placeholder='Password' name="Password" required>
+		    <input type='checkbox'class='check-box'><span>Remember Password</span>
+		    <button type='submit'class='submit-btn'>Log in</button>
+                </form>
+
+		 <form id='register' class='input-group-register' action="connect.php" method="POST">
+		     <input type='text'class='input-field'placeholder='FirstName' name="FirstName" required>
+		     <input type='text'class='input-field'placeholder='LastName ' name="LastName"required>
+              <input type='date'class='input-field'placeholder='Date_of_birth' name="Date_of_birth" required>
+		     <input type='email'class='input-field'placeholder='Email_id'name="Email_id" required>
+             <input type='text'class='input-field'placeholder='User_id 'name="User_id" required>
+		     <input type='password'class='input-field'placeholder='Password' name="Password" required></span>
+             <input type='checkbox'class='check-box'><span>i agree</span>
+            <button type='submit'class='submit-btn'>Register</button>
+	         </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+    
+    
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
