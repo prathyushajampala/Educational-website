@@ -28,8 +28,6 @@
    }
    else{
     echo '<script>alert("Invalid credentials. Please try again."); window.location = "Registration.html";</script>';
-    
-   
   }
   }
    
